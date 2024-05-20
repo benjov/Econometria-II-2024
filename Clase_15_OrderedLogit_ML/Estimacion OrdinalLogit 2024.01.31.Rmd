@@ -243,7 +243,8 @@ summary(table_Train, title = "Base Train")
 ### Estimación (Running the ordered logit model) 
 ```{r, echo = FALSE}
 
-OLM_01 <- polr(Cat.Rev.Year ~ Price + Score + Followers_n + positive_n + Adventure + Singleplayer + Story.Rich + Horror + X3D + Survival + Choices.Matter + Historical + Mystery + Replay.Value + Early.Access + Female.Protagonist + Lovecraftian + Open.World + Multiplayer + Co.op + Indie + Atmospheric + Violent + Online.Co.Op + Third.Person + Sandbox + Strategy + Difficult + Gore + Soundtrack + Great.Soundtrack + Simulation + RPG + Character.Customization + Funny + Sci.fi + Exploration + Action + Sexual.Content, data = Train, Hess = TRUE, method = "logistic")
+OLM_01 <- polr(Cat.Rev.Year ~ Price + Score + Followers_n + positive_n + Adventure + Singleplayer + Story.Rich + Horror + X3D + Survival + Choices.Matter + Historical + Mystery + Replay.Value + Early.Access + Female.Protagonist + Lovecraftian + Open.World + Multiplayer + Co.op + Indie + Atmospheric + Violent + Online.Co.Op + Third.Person + Sandbox + Strategy + Difficult + Gore + Soundtrack + Great.Soundtrack + Simulation + RPG + Character.Customization + Funny + Sci.fi + Exploration + Action + Sexual.Content, 
+               data = Train, Hess = TRUE, method = "logistic")
 
 saveRDS(OLM_01, "OLM_01_model.rds") # Guardamos el modelo para su uso en aplicaciones
 
